@@ -1,4 +1,6 @@
 
+package Kodstuga2026_10_02.Exercises2;
+
 public class PersonCard {
     public static void main(String[] args){
 
