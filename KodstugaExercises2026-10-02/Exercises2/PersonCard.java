@@ -4,6 +4,7 @@ public class PersonCard {
         String firstName = "Lisa";
         String lastName = "Andersson";
         int age = 28;
+        int ageNextYear = age + 1;
         double height = 1.72;
         char grade = 'B';
         boolean likesJava = true; 
@@ -12,10 +13,13 @@ public class PersonCard {
             "Firstname: " + firstName + "\n" +
             "LastName: " + lastName + "\n" +
             "Age: " + age + "\n" +
+            "ageNextYear: " + ageNextYear + "\n" +
             "Height: " + height + "\n" +
             "Grade: " + grade + "\n" +
             "Likes Java: " + likesJava
          );
+
+         System.out.println("Nästa år är Lisa " + ageNextYear + ".");
     }
 }
 
@@ -33,4 +37,23 @@ Namn: Lisa Andersson
 Längd: 1.72
 Betyg: B
 Gillar Java: true
- */
+
+Del 2 – Beräkna nästa års ålder
+int ageNextYear = age + 1;
+Skriv sedan ut:
+Nästa år är Lisa 29 år.
+
+Del 3 – Förbättra variabelnamnen
+Utgå från koden:
+String n = "Volvo";
+int x = 2022;
+double y = 185000;
+boolean b = true;
+
+Byt namn på variablerna så att någon annan programmerare förstår dem utan förklaring. Ett möjligt resultat:
+String carBrand = "Volvo";
+int modelYear = 2022;
+double price = 185000;
+boolean isElectric = true;
+
+*/
