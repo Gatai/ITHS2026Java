@@ -1,6 +1,9 @@
 
 public class PersonCard {
     public static void main(String[] args){
+
+        System.out.println("----------Del 1 - Skapa variabler som beskriver en påhittad person: och Del 2 – Beräkna nästa års ålder------------------------------------------------");
+
         String firstName = "Lisa";
         String lastName = "Andersson";
         int age = 28;
@@ -20,6 +23,24 @@ public class PersonCard {
          );
 
          System.out.println("Nästa år är Lisa " + ageNextYear + ".");
+
+         System.out.println("----------------------------------------------------------");
+
+         System.out.println("-------------------------Del 3 – Förbättra variabelnamnen---------------------------------");
+
+        String car = "Volvo";
+        int year = 2022;
+        double mile = 185000;
+        boolean sold = true;
+    
+     System.out.println(
+            "Car Name: " + car + "\n" +
+            "Year: " + year + "\n" +
+            "Mile: " + mile + "\n" +
+            "Is the car sold: " + sold
+         );
+    
+    
     }
 }
 
