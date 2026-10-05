@@ -83,17 +83,17 @@ public class ControlFlow {
         inputNumber = readLine.nextInt(); // Läser heltalet från användaren. 
         
         if (inputNumber >= 18 ) {
-            System.out.print("Du är mydig " + inputNumber);
+            System.out.println("Du är mydig " + inputNumber);
         }else{
-            System.out.print("Du är inte mydig " + inputNumber);
+            System.out.println("Du är inte mydig " + inputNumber);
         }
     }
 
      private static void elseIfExercise(){
         printSelectionTitle("elseIf (litet, mellan eller stort tal.");
-        System.out.print("Skrivin ett tal:  ");
+        System.out.println("Skrivin ett tal:  ");
 
-        inputNumber = readLine.nextInt(); // Läser heltalet från användaren. 
+        inputNumber = readLine.nextInt(); // Läser heltalet från användaren.
         
         if (inputNumber < 10) {
             System.out.println("Litet tal");
@@ -118,14 +118,14 @@ public class ControlFlow {
     }
 
     private  static void whileExercise(){
-        printSelectionTitle("While (1-5)");
-        System.out.print("Skriv in siffrorna mellan 1-5 ");
+        printSelectionTitle("While (1-x )");
+        System.out.println("Skriv in ett tal för att siffrorna skall skrivas ut antal. ");
         
         inputNumber = readLine.nextInt();
-
-        while (inputNumber <= 5) {
-            System.out.println("Nummer " + inputNumber);
-            inputNumber++;
+        int i = 1;
+        while (i <= inputNumber) {
+            System.out.println("Nummer " + i);
+            i++;
         }
     }
 
@@ -140,8 +140,9 @@ public class ControlFlow {
     }
 
     private static void forLoopExercise() {
-        printSelectionTitle("For-loop (1–10)");
-        for (int i = 1; i <= 10; i++) {
+        printSelectionTitle("For-loop (Du matar in hur många loopar for skall göra.)");
+
+        for (int i = 1; i <= inputNumber; i++) {
             System.out.println(i);
         }
     }
