@@ -12,17 +12,17 @@ public class ControlFlow {
         
         //Gör menyn för användaren.
         while (true) {
-            System.out.println("\nVälj en övning");
+            System.out.println("\nVälj en övning:");
             System.out.println("1. Scope");
             System.out.println("2. If (tal > 10)");
-            System.out.println("3. If/Else (18 år)");
-            System.out.println("4. Else/If (litet, mellan, stort tal)");
+            System.out.println("3. If/else (myndig eller inte)");
+            System.out.println("4. If/else if (litet, mellanstort eller stort tal)");
             System.out.println("5. Switch (1–3)");
-            System.out.println("6. While (1–5)");
-            System.out.println("7. Do-While (minst en gång)");
-            System.out.println("8. For-loop (1–10)");
-            System.out.println("9. Break");
-            System.out.println("10. Continue");
+            System.out.println("6. While-loop (räkna upp till ett tal)");
+            System.out.println("7. Do-while-loop (kör minst en gång)");
+            System.out.println("8. For-loop (räkna upp till ett tal)");
+            System.out.println("9. Break (avbryt en loop)");
+            System.out.println("10. Continue (hoppa över en iteration)");
             System.out.println("0. Avsluta");
 
             System.out.print("Ditt val: ");
@@ -43,13 +43,13 @@ public class ControlFlow {
                     System.out.println("Programmet avslutas.");
                     return;
                 }
-                default -> System.out.println("Ogiltigt val.");
+                default -> System.out.println("Ogiltigt val. Försök igen.");
             }
         }
     }
 
     private static void printSelectionTitle(String title){
-        System.out.println("\\n--- "+ title + " ---");
+        System.out.println("\n--- " + title + " ---");
     }
 
 
@@ -57,55 +57,56 @@ public class ControlFlow {
         printSelectionTitle("Scope");
         {
             int inside = 10;
-            System.err.println("Inne i blocket: " + inside);
+            System.out.println("Inne i blocket: " + inside);
         }
 
-        System.out.println("Utanför blocket kan vi inte använda variabeln 'inside'.");
+        System.out.println("Variabeln 'inside' är bara tillgänglig inne i blocket.");
     }
 
      private static void ifExercise(){
         printSelectionTitle("If (tal > 10)");
-        System.out.print("Skriv ett tal: ");
+        System.out.print("Ange ett tal: ");
 
         inputNumber = readLine.nextInt(); // Läser heltalet från användaren. 
         
-        if (inputNumber >= 10) {
-            System.out.println("Number " + inputNumber + " is bigger than 10.");
+        if (inputNumber > 10) {
+            System.out.println("Talet " + inputNumber + " är större än 10.");
         } else {
-            System.out.println("Number is smaller than 10.");
+            System.out.println("Talet " + inputNumber + " är 10 eller mindre.");
         }
     }
 
     private static void ifElseExercise(){
-        printSelectionTitle( "If/Else (18 år");
-        System.out.print("Skriv in ålder:  ");
+        printSelectionTitle("If/else (myndig eller inte)");
+        System.out.print("Ange din ålder: ");
 
         inputNumber = readLine.nextInt(); // Läser heltalet från användaren. 
         
-        if (inputNumber >= 18 ) {
-            System.out.println("Du är mydig " + inputNumber);
-        }else{
-            System.out.println("Du är inte mydig " + inputNumber);
+        if (inputNumber >= 18) {
+            System.out.println("Du är myndig.");
+        } else {
+            System.out.println("Du är inte myndig än.");
         }
     }
 
      private static void elseIfExercise(){
-        printSelectionTitle("elseIf (litet, mellan eller stort tal.");
-        System.out.println("Skrivin ett tal:  ");
+        printSelectionTitle("If/else if (litet, mellanstort eller stort tal)");
+        System.out.print("Ange ett tal: ");
 
         inputNumber = readLine.nextInt(); // Läser heltalet från användaren.
         
         if (inputNumber < 10) {
-            System.out.println("Litet tal");
-        }else if (inputNumber <= 20) {
-            System.out.println("Mellantal");
+            System.out.println("Litet tal.");
+        } else if (inputNumber <= 20) {
+            System.out.println("Mellanstort tal.");
+        } else {
+            System.out.println("Stort tal.");
         }
-            System.out.print("Stort tal!"); // Short else utan {}.
     }
 
     private static void switchExercise(){
-        printSelectionTitle("Switch (1-3)");
-        System.out.print("Skriv in ett tal mellan 1-3: ");
+        printSelectionTitle("Switch (1–3)");
+        System.out.print("Ange ett tal mellan 1 och 3: ");
 
         inputNumber = readLine.nextInt();
 
@@ -113,37 +114,39 @@ public class ControlFlow {
             case 1 -> System.out.println("Du valde alternativ 1.");
             case 2 -> System.out.println("Du valde alternativ 2.");
             case 3 -> System.out.println("Du valde alternativ 3.");
-            default -> System.out.println("Ogiltigt val.");
+            default -> System.out.println("Ogiltigt val. Ange 1, 2 eller 3.");
         }
     }
 
     private  static void whileExercise(){
-        printSelectionTitle("While (1-x )");
-        System.out.println("Skriv in ett tal för att siffrorna skall skrivas ut antal. ");
+        printSelectionTitle("While-loop (1 till det angivna talet)");
+        System.out.print("Ange ett heltal. Talen från 1 till det talet skrivs ut: ");
         
         inputNumber = readLine.nextInt();
         int i = 1;
         while (i <= inputNumber) {
-            System.out.println("Nummer " + i);
+            System.out.println("Tal " + i);
             i++;
         }
     }
 
     private static void doWhileExercise(){
-        printSelectionTitle("Do-While");
+        printSelectionTitle("Do-while-loop");
         int i = 1;
 
         do {
-            System.out.println("Detta kör minst en gång!");
+            System.out.println("Den här loopen körs minst en gång.");
             i++;
         }while(i < 1);
     }
 
     private static void forLoopExercise() {
-        printSelectionTitle("For-loop (Du matar in hur många loopar for skall göra.)");
+        printSelectionTitle("For-loop (1 till det angivna talet)");
+        System.out.print("Ange ett heltal. Talen från 1 till det talet skrivs ut: ");
+        inputNumber = readLine.nextInt();
 
         for (int i = 1; i <= inputNumber; i++) {
-            System.out.println(i);
+            System.out.println("Tal " + i);
         }
     }
 
@@ -151,7 +154,7 @@ public class ControlFlow {
         printSelectionTitle("Break");
         for (int i = 1; i <= 10; i++) {
             if (i == 5) {
-                System.out.println("Avbryter loopen vid 5.");
+                System.out.println("Loopen avbryts när räknaren når 5.");
                 break;
             }
             System.out.println(i);
@@ -162,7 +165,7 @@ public class ControlFlow {
         printSelectionTitle("Continue");
         for (int i = 1; i <= 10; i++) {
             if (i == 5) {
-                System.out.println("Hoppar över 5.");
+                System.out.println("Talet 5 hoppas över.");
                 continue;
             }
             System.out.println(i);
