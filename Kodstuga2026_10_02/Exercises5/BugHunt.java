@@ -7,16 +7,16 @@ public class BugHunt {
 
         int age = 25;
 
-        double height = 1.72;
+       // double height = 1.72;
 
-        char grade = 'A';
+        // char grade = 'A';
 
-        boolean likesJava = true;
+        // boolean likesJava = true;
 
         int apples = 5;
         int bananas = 2;
 
-        System.out.println("Fruit: " + apples + bananas);
+        System.out.println("Fruit: " + (apples + bananas));
 
         System.out.println("Name: " + name);
 
