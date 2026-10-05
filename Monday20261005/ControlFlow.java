@@ -6,8 +6,7 @@ public class ControlFlow {
 
     static Scanner readLine = new Scanner(System.in); // Statisk variabel som används i klassen.
 
-    static int inputNumber = readLine.nextInt(); // Läser heltalet från användaren. 
-
+    static int inputNumber;  
 
     public static void main (String [] args){
         
@@ -33,9 +32,9 @@ public class ControlFlow {
                 case 1 -> scopeExercise();
                 case 2 -> ifExercise();
                 case 3 -> ifElseExercise();
-                // case 4 -> elseIfExercise();
-                // case 5 -> switchExercise();
-                // case 6 -> whileExercise();
+                case 4 -> elseIfExercise();
+                case 5 -> switchExercise();
+                case 6 -> whileExercise();
                 // case 7 -> doWhileExercise();
                 // case 8 -> forLoopExercise();
                 // case 9 -> breakExercise();
@@ -63,7 +62,7 @@ public class ControlFlow {
         System.out.println("\n--- If (tal > 10) ---");
         System.out.print("Skriv ett tal: ");
 
-        // int number = readLine.nextInt(); // Läser heltalet från användaren. 
+        inputNumber = readLine.nextInt(); // Läser heltalet från användaren. 
         
         if (inputNumber >= 10) {
             System.out.println("Number " + inputNumber + " is bigger than 10.");
@@ -76,15 +75,54 @@ public class ControlFlow {
         System.out.println("\n--- If/Else (18 år) ---");
         System.out.print("Skriv in ålder:  ");
 
-        int number = readLine.nextInt(); // Läser heltalet från användaren. 
+        inputNumber = readLine.nextInt(); // Läser heltalet från användaren. 
         
-        if (number >= 18 ) {
-            System.out.print("Du är mydig " + number);
+        if (inputNumber >= 18 ) {
+            System.out.print("Du är mydig " + inputNumber);
         }else{
-            System.out.print("Du är inte mydig " + number);
+            System.out.print("Du är inte mydig " + inputNumber);
         }
-
     }
+
+     private static void elseIfExercise(){
+        System.out.println("\n--- elseIf (litet, mellan eller stort tal.) ---");
+        System.out.print("Skrivin ett tal:  ");
+
+        inputNumber = readLine.nextInt(); // Läser heltalet från användaren. 
+        
+        if (inputNumber < 10) {
+            System.out.println("Litet tal");
+        }else if (inputNumber <= 20) {
+            System.out.println("Mellantal");
+        }
+            System.out.print("Stort tal!"); // Short else utan {}.
+    }
+
+    private static void switchExercise(){
+        System.out.println("\n--- Switch (1-3) ---");
+        System.out.print("Skriv in ett tal mellan 1-3: ");
+
+        inputNumber = readLine.nextInt();
+
+        switch (inputNumber) {
+            case 1 -> System.out.println("Du valde alternativ 1.");
+            case 2 -> System.out.println("Du valde alternativ 2.");
+            case 3 -> System.out.println("Du valde alternativ 3.");
+            default -> System.out.println("Ogiltigt val.");
+        }
+    }
+
+    private  static void whileExercise(){
+        System.out.println("\n--- While (1-5) ---");
+        
+        inputNumber = readLine.nextInt();
+
+    while (inputNumber <= 5) {
+        System.out.println("Nummer " + inputNumber);
+    }
+    }
+
+
 
 
 
