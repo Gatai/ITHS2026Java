@@ -1,4 +1,4 @@
-package Kodstuga2026_10_02.Exercises4;
+package Kodstuga20261002.Exercises4;
 
 public class StringWorkshop {
     public static void main (String[] args) {

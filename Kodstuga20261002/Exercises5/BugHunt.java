@@ -1,4 +1,4 @@
-package Kodstuga2026_10_02.Exercises5;
+package Kodstuga20261002.Exercises5;
 
 public class BugHunt {
     public static void main (String[] args) {

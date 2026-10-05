@@ -5,6 +5,10 @@ import java.util.Scanner;
 public class ControlFlow {
 
     static Scanner readLine = new Scanner(System.in); // Statisk variabel som används i klassen.
+
+    static int inputNumber = readLine.nextInt(); // Läser heltalet från användaren. 
+
+
     public static void main (String [] args){
         
         //Gör menyn för användaren.
@@ -28,7 +32,7 @@ public class ControlFlow {
              switch (choice) {
                 case 1 -> scopeExercise();
                 case 2 -> ifExercise();
-                // case 3 -> ifElseExercise();
+                case 3 -> ifElseExercise();
                 // case 4 -> elseIfExercise();
                 // case 5 -> switchExercise();
                 // case 6 -> whileExercise();
@@ -46,22 +50,44 @@ public class ControlFlow {
     }
 
     private static void scopeExercise(){
+        System.out.println("\n--- Scope ---");
+        {
+            int inside = 10;
+            System.err.println("Inne i blocket: " + inside);
+        }
 
+        System.out.println("Utanför blocket kan vi inte använda variabeln 'inside'.");
     }
 
      private static void ifExercise(){
-
         System.out.println("\n--- If (tal > 10) ---");
         System.out.print("Skriv ett tal: ");
 
-        int number = readLine.nextInt(); // Läser heltalet från användaren. 
+        // int number = readLine.nextInt(); // Läser heltalet från användaren. 
         
-        if (number >= 10) {
-            System.out.println("Number " + number + " is bigger than 10.");
+        if (inputNumber >= 10) {
+            System.out.println("Number " + inputNumber + " is bigger than 10.");
         } else {
             System.out.println("Number is smaller than 10.");
         }
     }
+
+    private static void ifElseExercise(){
+        System.out.println("\n--- If/Else (18 år) ---");
+        System.out.print("Skriv in ålder:  ");
+
+        int number = readLine.nextInt(); // Läser heltalet från användaren. 
+        
+        if (number >= 18 ) {
+            System.out.print("Du är mydig " + number);
+        }else{
+            System.out.print("Du är inte mydig " + number);
+        }
+
+    }
+
+
+
 }
 
 

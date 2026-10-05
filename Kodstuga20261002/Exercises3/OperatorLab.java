@@ -1,4 +1,4 @@
-package Kodstuga2026_10_02.Exercises3;
+package Kodstuga20261002.Exercises3;
 
 public class OperatorLab {
     public static void main (String[] args){
