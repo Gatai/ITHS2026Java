@@ -35,10 +35,10 @@ public class ControlFlow {
                 case 4 -> elseIfExercise();
                 case 5 -> switchExercise();
                 case 6 -> whileExercise();
-                // case 7 -> doWhileExercise();
-                // case 8 -> forLoopExercise();
-                // case 9 -> breakExercise();
-                // case 10 -> continueExercise();
+                case 7 -> doWhileExercise();
+                case 8 -> forLoopExercise();
+                case 9 -> breakExercise();
+                case 10 -> continueExercise();
                 case 0 -> {
                     System.out.println("Programmet avslutas.");
                     return;
@@ -48,8 +48,13 @@ public class ControlFlow {
         }
     }
 
+    private static void printSelectionTitle(String title){
+        System.out.println("\\n--- "+ title + " ---");
+    }
+
+
     private static void scopeExercise(){
-        System.out.println("\n--- Scope ---");
+        printSelectionTitle("Scope");
         {
             int inside = 10;
             System.err.println("Inne i blocket: " + inside);
@@ -59,7 +64,7 @@ public class ControlFlow {
     }
 
      private static void ifExercise(){
-        System.out.println("\n--- If (tal > 10) ---");
+        printSelectionTitle("If (tal > 10)");
         System.out.print("Skriv ett tal: ");
 
         inputNumber = readLine.nextInt(); // Läser heltalet från användaren. 
@@ -72,7 +77,7 @@ public class ControlFlow {
     }
 
     private static void ifElseExercise(){
-        System.out.println("\n--- If/Else (18 år) ---");
+        printSelectionTitle( "If/Else (18 år");
         System.out.print("Skriv in ålder:  ");
 
         inputNumber = readLine.nextInt(); // Läser heltalet från användaren. 
@@ -85,7 +90,7 @@ public class ControlFlow {
     }
 
      private static void elseIfExercise(){
-        System.out.println("\n--- elseIf (litet, mellan eller stort tal.) ---");
+        printSelectionTitle("elseIf (litet, mellan eller stort tal.");
         System.out.print("Skrivin ett tal:  ");
 
         inputNumber = readLine.nextInt(); // Läser heltalet från användaren. 
@@ -99,7 +104,7 @@ public class ControlFlow {
     }
 
     private static void switchExercise(){
-        System.out.println("\n--- Switch (1-3) ---");
+        printSelectionTitle("Switch (1-3)");
         System.out.print("Skriv in ett tal mellan 1-3: ");
 
         inputNumber = readLine.nextInt();
@@ -113,25 +118,61 @@ public class ControlFlow {
     }
 
     private  static void whileExercise(){
-        System.out.println("\n--- While (1-5) ---");
+        printSelectionTitle("While (1-5)");
+        System.out.print("Skriv in siffrorna mellan 1-5 ");
         
         inputNumber = readLine.nextInt();
 
-    while (inputNumber <= 5) {
-        System.out.println("Nummer " + inputNumber);
+        while (inputNumber <= 5) {
+            System.out.println("Nummer " + inputNumber);
+            inputNumber++;
+        }
     }
+
+    private static void doWhileExercise(){
+        printSelectionTitle("Do-While");
+        int i = 1;
+
+        do {
+            System.out.println("Detta kör minst en gång!");
+            i++;
+        }while(i < 1);
     }
 
+    private static void forLoopExercise() {
+        printSelectionTitle("For-loop (1–10)");
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
+    }
 
+    private static void breakExercise() {
+        printSelectionTitle("Break");
+        for (int i = 1; i <= 10; i++) {
+            if (i == 5) {
+                System.out.println("Avbryter loopen vid 5.");
+                break;
+            }
+            System.out.println(i);
+        }
+    }
 
-
-
+   private static void continueExercise() {
+        printSelectionTitle("Continue");
+        for (int i = 1; i <= 10; i++) {
+            if (i == 5) {
+                System.out.println("Hoppar över 5.");
+                continue;
+            }
+            System.out.println(i);
+        }
+    }
 }
 
-
-
-
 /*
+Uppgifterna nedan:
+
+
 Scope
 Skapa en variabel inne i ett kodblock och testa vad som händer om du försöker använda den utanför blocket.
 
