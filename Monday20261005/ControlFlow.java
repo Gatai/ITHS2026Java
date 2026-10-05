@@ -3,27 +3,64 @@ package Monday20261005;
 import java.util.Scanner;
 
 public class ControlFlow {
+
+    static Scanner readLine = new Scanner(System.in); // Statisk variabel som används i klassen.
     public static void main (String [] args){
-    /*
-        If
-        Gör ett program som skriver ut ett meddelande om ett tal är större än 10.
-    
-        Min egna extra: låt användaren bestämma inmatningen på nr.
-        */
-
-        Scanner readInput = new Scanner(System.in); // Skapar ett objekt som kan läsa från tangentbordet.
-
-        System.out.print("Wrtite a number: ");
-        int userInput = readInput.nextInt(); // Läser heltalet från användaren. 
         
-        if (userInput >= 10) {
-            System.out.println("Number is bigger than 10.");
+        //Gör menyn för användaren.
+        while (true) {
+            System.out.println("\nVälj en övning");
+            System.out.println("1. Scope");
+            System.out.println("2. If (tal > 10)");
+            System.out.println("3. If/Else (18 år)");
+            System.out.println("4. Else/If (litet, mellan, stort tal)");
+            System.out.println("5. Switch (1–3)");
+            System.out.println("6. While (1–5)");
+            System.out.println("7. Do-While (minst en gång)");
+            System.out.println("8. For-loop (1–10)");
+            System.out.println("9. Break");
+            System.out.println("10. Continue");
+            System.out.println("0. Avsluta");
+
+            System.out.print("Ditt val: ");
+            int choice = readLine.nextInt(); // användarens input från console.
+            
+             switch (choice) {
+                case 1 -> scopeExercise();
+                case 2 -> ifExercise();
+                // case 3 -> ifElseExercise();
+                // case 4 -> elseIfExercise();
+                // case 5 -> switchExercise();
+                // case 6 -> whileExercise();
+                // case 7 -> doWhileExercise();
+                // case 8 -> forLoopExercise();
+                // case 9 -> breakExercise();
+                // case 10 -> continueExercise();
+                case 0 -> {
+                    System.out.println("Programmet avslutas.");
+                    return;
+                }
+                default -> System.out.println("Ogiltigt val.");
+            }
+        }
+    }
+
+    private static void scopeExercise(){
+
+    }
+
+     private static void ifExercise(){
+
+        System.out.println("\n--- If (tal > 10) ---");
+        System.out.print("Skriv ett tal: ");
+
+        int number = readLine.nextInt(); // Läser heltalet från användaren. 
+        
+        if (number >= 10) {
+            System.out.println("Number " + number + " is bigger than 10.");
         } else {
             System.out.println("Number is smaller than 10.");
         }
-
-        readInput.close();
-
     }
 }
 
