@@ -16,7 +16,7 @@ public class Animal {
             this.sound = sound;
         }
 
-    public void goSound(){
-         System.out.println("woff");
+    public String goSound(){
+         return sound;
     }
 }
