@@ -25,6 +25,11 @@ public class Wednesday {
         Robot turbo = new Robot("Turbo", 500); // värdet 500 spelar ingen roll då den bara skriver över och använder default värdet.
         turbo.name = "new name";
         turbo.displayStatus();
+
+        // Överlagrade konstruktorers
+        Robot tes = new Robot(1998);
+        tes.displayStatus();
+
     }
 }
 
