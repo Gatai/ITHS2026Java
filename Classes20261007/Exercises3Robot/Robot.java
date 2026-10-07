@@ -17,7 +17,6 @@ public class Robot {
         this.battery = 100; // Man kommer inte kunna nå denna då det är privat.
     }
 
-
 /*
 Extra – om du blir klar snabbt
 Lägg till en extra konstruktor i någon av klasserna så att objekt kan skapas med färre argument.
