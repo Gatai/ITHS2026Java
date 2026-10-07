@@ -12,7 +12,8 @@ public class Wednesday {
         //ExerciseClass1();
 
         // Andra filen Övningar Klasser2.docx book
-        ExerciseClass2();
+        ExerciseBook();
+        
 
     }
 
@@ -41,7 +42,7 @@ public class Wednesday {
         tes.displayStatus();
     }
 
-    public static void ExerciseClass2(){
+    public static void ExerciseBook(){
         /*
         1. Book Class Create a Book class with the following properties: title (String), author (String), and year (int). 
             Implement a parameterless constructor that initializes the properties with default values. 
