@@ -1,4 +1,4 @@
-package Classes20261007.ExercisesClass2;
+package Classes20261007.ExercisesClassBook;
 
 /*
     1. Book Class Create a Book class with the following properties: title (String), author (String), and year (int). 
