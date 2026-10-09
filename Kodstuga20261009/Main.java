@@ -5,6 +5,9 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
+        Pet pet = new Pet("Goblin");
+        pet.start();
+
         /*
          * Monster Arena
          * Monster goblin = new Monster("Goblin", 30);
@@ -23,6 +26,65 @@ public class Main {
         // rocketLaunch(); // for-loop och continue
         // theFridayMenu(); // switch, case, break
         // rollerCoaster(); // if / else if / else
+    }
+
+    public static class Pet {
+        private String name;
+        private int hunger;
+        private int energy;
+
+        Random ran = new Random();
+
+        Pet(String name) {
+            this.name = name;
+            this.hunger = ran.nextInt(11);
+            this.energy = ran.nextInt(50); // 0-49
+        }
+
+        private void eat() {
+            hunger = hunger - 3; // Det är samma hunger -= 3;
+            if (hunger < 0) { // Det går att skriva hunger = Math.max(0, hunger - 3); använda metoden max().
+                hunger = 0;
+            }
+            System.out.println(name + " eats. Hunger: " + hunger);
+        }
+
+        private void play() {
+            if (energy <= 3) {
+                System.out.println(name + " is too tired to play.");
+                return;
+            }
+
+            energy = energy - 3; // energy -= 3;
+            hunger = hunger + 3; // hunger += 2;
+
+            System.out.println("-------------------------Playing-----------------------------------");
+            System.out.println(name + " plays! Energy: " + energy + ", Hunger: " + hunger);
+            System.out.println("-------------------------End Playing-------------------------------");
+
+            if (hunger >= 12) {
+                System.out.println(name + " complains: I'm hungry!");
+            }
+        }
+
+        private void status() {
+            System.out.println("-------------------------Status-----------------------------------");
+            System.out.println("Pet: " + name + " | Hunger: " + hunger + " | Energy: " + energy);
+            System.out.println("-------------------------End status-------------------------------");
+
+        }
+
+        // vill anropa denna metoden i main.
+        public void start() {
+
+            for (int i = 0; i < 10; i++) {
+                status();
+                play();
+                eat();
+                play();
+                status();
+            }
+        }
     }
 
     public static class Monster {
