@@ -23,7 +23,7 @@
  * 
  * Tränar: for-loop och continue
  * 
- * 4. Bygg ett eget djur
+ * 4. Bygg ett eget djur 
  * · Skapa klassen Djur med namn, ålder och ljud.
  * · Skapa en konstruktor som sätter värden på variablerna.
  * · Skapa metoden gorLjud() som skriver ut djurets ljud.

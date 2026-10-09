@@ -5,8 +5,48 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
-        theFridayMenu();
-        // rollerCoaster();
+        /*
+         * Build your own animal
+         * Animal dog = new Animal("Bamse", 3, "Woof!");
+         * Animal cat = new Animal("Misse", 2, "Meow!");
+         * 
+         * dog.makeSound();
+         * cat.makeSound();
+         */
+
+        // rocketLaunch(); // for-loop och continue
+        // theFridayMenu(); // switch, case, break
+        // rollerCoaster(); // if / else if / else
+    }
+
+    public static class Animal {
+
+        // Fields
+        String name;
+        int age;
+        String sound;
+
+        // Constructor
+        public Animal(String name, int age, String sound) {
+            this.name = name;
+            this.age = age;
+            this.sound = sound;
+        }
+
+        // Method
+        public void makeSound() {
+            System.out.println(name + " says: " + sound);
+        }
+    }
+
+    public static void rocketLaunch() {
+        for (int i = 0; i < 10; i++) {
+            if (i == 5) {
+                continue;
+            }
+            System.out.println(i);
+        }
+        System.out.println("LIFTOFF");
     }
 
     public static void theFridayMenu() {
