@@ -1,4 +1,4 @@
-package Kodstuga20261009;
+package Kodstuga.Kodstuga20261009;
 
 import java.util.Random;
 

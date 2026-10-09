@@ -1,4 +1,4 @@
-package Classes20261007.ExercisesClassStudent;
+package Lessons.Classes20261007.ExercisesClassStudent;
 
 public class Student {
     /*

@@ -1,4 +1,4 @@
-package Kodstuga20261002.Exercises1;
+package Kodstuga.Kodstuga20261002.Exercises1;
 
 public class FridayPractice {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Classes20261007.ExercisesClassBook;
+package Lessons.Classes20261007.ExercisesClassBook;
 
 /*
     1. Book Class Create a Book class with the following properties: title (String), author (String), and year (int). 
@@ -11,7 +11,7 @@ public class Book {
     public String author;
     public int year;
 
-   public Book(){
+    public Book() {
         this.title = "Unknown title";
         this.author = "Unknown author";
         this.year = 0;

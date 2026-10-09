@@ -1,13 +1,13 @@
-package Kodstuga20261002.Exercises5;
+package Kodstuga.Kodstuga20261002.Exercises5;
 
 public class BugHunt {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         String name = "Ada";
 
         int age = 25;
 
-       // double height = 1.72;
+        // double height = 1.72;
 
         // char grade = 'A';
 
