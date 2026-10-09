@@ -6,6 +6,12 @@ public class Main {
     public static void main(String[] args) {
 
         /*
+         * Monster Arena
+         * Monster goblin = new Monster("Goblin", 30);
+         * goblin.fight(); // all logik ligger i klassen
+         */
+
+        /*
          * Build your own animal
          * Animal dog = new Animal("Bamse", 3, "Woof!");
          * Animal cat = new Animal("Misse", 2, "Meow!");
@@ -17,6 +23,33 @@ public class Main {
         // rocketLaunch(); // for-loop och continue
         // theFridayMenu(); // switch, case, break
         // rollerCoaster(); // if / else if / else
+    }
+
+    public static class Monster {
+        String name;
+        int health;
+
+        Monster(String name, int health) {
+            this.name = name;
+            this.health = health;
+        }
+
+        public void fight() {
+            int round = 1;
+
+            while (health > 0) {
+                System.out.println("Round " + round);
+                takeDamage(7);
+                round++;
+            }
+
+            System.out.println(name + " has been defeated!");
+        }
+
+        public void takeDamage(int amount) {
+            health -= amount;
+            System.out.println(name + " takes " + amount + " damage. Health: " + health);
+        }
     }
 
     public static class Animal {
