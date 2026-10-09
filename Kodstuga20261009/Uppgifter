@@ -1,0 +1,54 @@
+/*
+ * 1. Får du åka berg- och-dalbanan?
+ * · Skapa variabler för en persons ålder och längd.
+ * · Använd if, else if och else för att avgöra om personen får åka.
+ * · Programmet ska skriva ut ett tydligt meddelande beroende på resultatet.
+ * 
+ * Egna validering:
+ * under 90 length får man inte åka.
+ * 
+ * Tränar: if / else if / else
+ * 
+ * 2. Fredagsmenyn
+ * · Skapa en variabel choice med ett värde mellan 1 och 4.
+ * · Använd switch för att koppla varje val till en maträtt.
+ * · Lägg till default för ett ogiltigt val.
+ * 
+ * Tränar: switch, case, break
+ * 
+ * 3. Raketuppskjutning
+ * · Gör en for-loop som räknar ner från 10 till 1.
+ * · Efter nedräkningen ska programmet skriva ut "LIFTOFF!".
+ * · Utöka programmet så att talet 5 hoppas över med continue.
+ * 
+ * Tränar: for-loop och continue
+ * 
+ * 4. Bygg ett eget djur
+ * · Skapa klassen Djur med namn, ålder och ljud.
+ * · Skapa en konstruktor som sätter värden på variablerna.
+ * · Skapa metoden gorLjud() som skriver ut djurets ljud.
+ * · Skapa minst två olika Djur-objekt i main och låt dem göra sina ljud.
+ * 
+ * Tränar: klass, objekt, fields, konstruktor, metod och punktoperatorn
+ * 
+ * 5. Monster Arena
+ * · Skapa klassen Monster med namn och health.
+ * · Skapa en konstruktor som bestämmer monstrets namn och start-health.
+ * · Skapa ett monster i main.
+ * · Använd en loop för att simulera attacker där monstret förlorar health varje
+ * runda.
+ * · Avsluta loopen med break när monstrets health är 0 eller mindre.
+ * 
+ * Tränar: klasser + objekt + loop + if + break
+ * 
+ * 6. Bonus - Tamagotchi
+ * · Skapa klassen Pet med till exempel name, hunger och energy.
+ * · Lägg till metoderna eat() och play() som förändrar värdena.
+ * · Om hunger blir för hög ska djuret klaga.
+ * · Om energy blir för låg ska djuret vägra leka.
+ * · Extra: gör variablerna private.
+ * 
+ * Tränar: klasser, metoder, if-satser och access modifiers
+ * 
+ * 
+ */
