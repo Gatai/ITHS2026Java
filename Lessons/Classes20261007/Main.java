@@ -1,11 +1,11 @@
-package Classes20261007;
+package Lessons.Classes20261007;
 
-import Classes20261007.Exercises1Animal.Animal;
-import Classes20261007.Exercises2Game.GameCharacter;
-import Classes20261007.Exercises3Robot.Robot;
-import Classes20261007.ExercisesClassBook.Book;
-import Classes20261007.ExercisesClassStudent.Student;
-import Classes20261007.ExercisesClassCar.Car;
+import Lessons.Classes20261007.Exercises1Animal.Animal;
+import Lessons.Classes20261007.Exercises2Game.GameCharacter;
+import Lessons.Classes20261007.Exercises3Robot.Robot;
+import Lessons.Classes20261007.ExercisesClassBook.Book;
+import Lessons.Classes20261007.ExercisesClassCar.Car;
+import Lessons.Classes20261007.ExercisesClassStudent.Student;
 
 public class Main {
     public static void main(String[] args) {
