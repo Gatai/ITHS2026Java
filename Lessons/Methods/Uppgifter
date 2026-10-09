@@ -1,0 +1,65 @@
+Övning 1 – Hälsningsroboten
+Skapa en klass Robot. Roboten ska kunna hälsa när du anropar en metod.
+· Skapa metoden halsa().
+· Metoden ska skriva ut exempelvis: "Hej människa! Jag är en robot."
+· Metoden ska inte returnera något.
+· Anropa metoden från main().
+
+Tränar på: void, metoddeklaration och metodanrop.
+
+Övning 2 – Pizzakalkylatorn
+Skapa en metod som räknar ut vad en pizzabeställning kostar.
+· Skapa metoden beraknaPris(...).
+· Metoden ska ta emot antal pizzor och pris per pizza som parametrar.
+· Metoden ska returnera det totala priset.
+· Anropa metoden och skriv ut resultatet.
+
+Tränar på: parametrar, returvärde och return.
+
+Övning 3 – Superhjältekraft
+En superhjälte har olika egenskaper som tillsammans avgör hur stark hjälten är.
+· Skapa metoden powerLevel(int strength, int speed).
+· Metoden ska returnera strength + speed.
+· Anropa metoden från main() och skriv ut resultatet.
+· Bonus: Lägg till en tredje parameter, exempelvis intelligence, och låt den också påverka resultatet.
+
+Tränar på: flera parametrar och returvärden.
+
+Övning 4 – Den hungriga hunden
+Skapa en klass Dog där hundens hunger kan förändras med hjälp av metoder.
+· Skapa instansvariabeln int hunger.
+· Skapa metoden eat() som minskar hundens hunger.
+· Skapa metoden showHunger() som skriver ut hur hungrig hunden är.
+· Skapa ett Dog-objekt i main() och anropa metoderna med punktoperatorn.
+
+Tränar på: objekt, state, void-metoder och punktoperatorn.
+
+Övning 5 – Hemlig highscore
+Skapa en klass Player där spelarens poäng är privat och bara nås genom metoder.
+· Skapa private int score.
+· Skapa getScore() som returnerar spelarens score.
+· Skapa setScore(int score) som ändrar spelarens score.
+· Använd this.score i settern.
+· Testa från main() att ändra och läsa spelarens score.
+
+Tränar på: private, getters, setters, parametrar, this och shadowing.
+
+Övning 6 – Samma metod, olika magi
+Skapa flera versioner av en metod med samma namn men olika parametrar.
+· Skapa en metod som heter showPower(...) och tar emot en int.
+· Skapa en annan showPower(...) som tar emot en String.
+· Anropa båda versionerna från main().
+· Fundera: Hur vet Java vilken version som ska köras?
+
+Tränar på: method overloading.
+
+Övning 7 – Boss fight – Metodprogrammet
+Skapa ett litet program där spelaren slåss mot ett monster. Fokuset är att dela upp programmet i tydliga metoder.
+· Ha minst en void-metod som skriver ut en attack.
+· Ha minst en metod med en parameter, exempelvis attack(int damage).
+· Ha minst en metod som returnerar ett värde.
+· Skapa minst ett objekt.
+· Gör minst ett metodanrop med punktoperatorn.
+· Bonus: Gör någon metod static och fundera på varför den kan anropas utan att först skapa ett objekt.
+
+Tränar på: att kombinera flera delar från föreläsningen. 
