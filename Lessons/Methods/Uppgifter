@@ -55,7 +55,7 @@ Tränar på: method overloading.
 
 Övning 7 – Boss fight – Metodprogrammet
 Skapa ett litet program där spelaren slåss mot ett monster.
- Fokuset är att dela upp programmet i tydliga metoder.
+Fokuset är att dela upp programmet i tydliga metoder.
 · Ha minst en void-metod som skriver ut en attack.
 · Ha minst en metod med en parameter, exempelvis attack(int damage).
 · Ha minst en metod som returnerar ett värde.
@@ -64,3 +64,6 @@ Skapa ett litet program där spelaren slåss mot ett monster.
 · Bonus: Gör någon metod static och fundera på varför den kan anropas utan att först skapa ett objekt.
 
 Tränar på: att kombinera flera delar från föreläsningen. 
+
+
+
