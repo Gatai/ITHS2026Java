@@ -17,9 +17,20 @@ public class Main {
 
         /*
          * Övning 4 – Den hungriga hunden
-         * 
+         * Dog dog = new Dog();
+         * dog.showHunger();
          */
-        Dog dog = new Dog();
-        dog.showHunger();
+
+        /*
+         * Övning 5 – Hemlig highscore
+         */
+
+        for (int i = 0; i < 5; i++) {
+            Player p1 = new Player();
+            Player p2 = new Player();
+            Game.determineWinner(p1, p2);
+            System.out.println("------------------Next game-------------");
+            i++;
+        }
     }
 }
