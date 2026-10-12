@@ -44,7 +44,7 @@ Skapa en klass Player där spelarens poäng är privat och bara nås genom metod
 
 Tränar på: private, getters, setters, parametrar, this och shadowing.
 
-Övning 6 – Samma metod, olika magi
+Övning 6 – Samma metod, olika magi - Jag kan detta skippar att göra de.
 Skapa flera versioner av en metod med samma namn men olika parametrar.
 · Skapa en metod som heter showPower(...) och tar emot en int.
 · Skapa en annan showPower(...) som tar emot en String.
@@ -54,7 +54,8 @@ Skapa flera versioner av en metod med samma namn men olika parametrar.
 Tränar på: method overloading.
 
 Övning 7 – Boss fight – Metodprogrammet
-Skapa ett litet program där spelaren slåss mot ett monster. Fokuset är att dela upp programmet i tydliga metoder.
+Skapa ett litet program där spelaren slåss mot ett monster.
+ Fokuset är att dela upp programmet i tydliga metoder.
 · Ha minst en void-metod som skriver ut en attack.
 · Ha minst en metod med en parameter, exempelvis attack(int damage).
 · Ha minst en metod som returnerar ett värde.
