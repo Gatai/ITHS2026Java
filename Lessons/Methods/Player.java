@@ -1,13 +1,27 @@
 package Lessons.Methods;
 
 import java.util.Random;
+import Helper.TerminalColors;
 
-public class Player {
+// player ärver 
+public class Player extends Fighter {
+    private final Random random = new Random();
     private int score;
 
     public Player() {
-        Random ran = new Random();
-        score = ran.nextInt(100) + 1;
+        super("Player", 150); // konstruktorn från fighter klassen
+        score = random.nextInt(100) + 1;
+    }
+
+    @Override
+    public void attack(Fighter target) {
+        int damage = random.nextInt(16) + 10;
+
+        System.out.println(TerminalColors.PLAYER
+                + getName() + " attacks " + target.getName()
+                + " for " + damage + " damage"
+                + TerminalColors.RESET);
+        target.takeDamage(damage);
     }
 
     public int getScore() {

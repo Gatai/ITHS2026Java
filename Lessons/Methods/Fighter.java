@@ -9,6 +9,8 @@ public abstract class Fighter {
         this.health = health;
     }
 
+    public abstract void attack(Fighter target);
+
     public String getName() {
         return name;
     }
@@ -29,5 +31,4 @@ public abstract class Fighter {
         return health > 0;
     }
 
-    public abstract void attack(Fighter target);
 }

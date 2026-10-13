@@ -41,8 +41,7 @@ public class Main {
 
         /*
          * Övning 7 – Boss fight – Metodprogrammet
-         * 
          */
-
+        Game.playFights(15);
     }
 }
