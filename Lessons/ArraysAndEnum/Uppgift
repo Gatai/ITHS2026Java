@@ -1,0 +1,58 @@
+1. Ditt eget spellager
+
+Du har samlat fem föremål i ett datorspel och vill spara dem i en array.
+
+· Skapa en String[] med fem valfria föremål, exempelvis svärd, sköld och potion.
+· Skriv ut det första och sista föremålet med hjälp av index.
+· Byt ut det tredje föremålet mot något bättre.
+· Skriv ut hur många föremål du har med .length.
+
+Bonus: Använd en enhanced for-loop för att skriva ut hela ditt spellager.
+
+2. Highscore-listan
+
+Du utvecklar ett spel och vill hålla reda på spelarnas poäng.
+
+· Skapa en int[] som innehåller fem olika poäng.
+· Använd en vanlig for-loop för att skriva ut alla poäng.
+· Skriv ut den totala summan av poängen.
+· Använd Arrays.sort() för att sortera poängen.
+· Skriv ut den sorterade arrayen med Arrays.toString().
+
+Bonus: Skriv ut den högsta poängen efter sorteringen.
+
+3. Skattjakten
+
+Du ska skapa en liten skattkarta med hjälp av en tvådimensionell array.
+
+· Skapa en int[][] med 3 rader och 3 kolumner.
+· Placera ut en skatt genom att sätta värdet 1 på valfri position.
+· Låt alla andra positioner ha värdet 0.
+· Använd två for-loopar för att skriva ut hela kartan som ett rutnät.
+
+Bonus: Flytta skatten genom att ändra två värden i arrayen.
+
+4. Äventyrarens kompass
+
+Du skapar ett äventyrsspel där spelaren kan gå i olika väderstreck.
+
+· Skapa en enum som heter Direction.
+· Lägg till NORTH, EAST, SOUTH och WEST.
+· Skapa en variabel som innehåller Direction.NORTH.
+· Använd switch-case för att skriva ut olika meddelanden beroende på riktning.
+· Använd Direction.values() tillsammans med en enhanced for-loop för att skriva ut alla riktningar.
+
+Bonus: Ändra spelarens riktning och se hur utskriften förändras.
+
+5. Tärningsspelet
+
+Du ska skapa ett enkelt tärningsspel där resultaten från fem kast redan är bestämda.
+
+· Skapa en int[] med fem tärningskast, värden mellan 1 och 6.
+· Använd en loop för att skriva ut alla kast.
+· Räkna ut den sammanlagda poängen.
+· Använd Arrays.sort() för att sortera kasten.
+· Skriv ut det lägsta och högsta kastet.
+· Använd Arrays.binarySearch() för att söka efter värdet 6 i den sorterade arrayen.
+
+Bonus: Använd Arrays.copyOf() för att skapa en ny array som har plats för ytterligare två kast. 
