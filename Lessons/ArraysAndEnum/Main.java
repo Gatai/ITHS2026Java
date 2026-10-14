@@ -6,6 +6,9 @@ public class Main {
         // GameStore.printAllItemInfo();
 
         // 2. Highscore-listan
-        HighScore.printScoresAndTotal();
+        // HighScore.printScoresAndTotal();
+
+        // 3. Skattjakten
+        TreasureMap.printTreasureMap();
     }
 }
