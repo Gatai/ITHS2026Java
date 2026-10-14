@@ -9,6 +9,9 @@ public class Main {
         // HighScore.printScoresAndTotal();
 
         // 3. Skattjakten
-        TreasureMap.printTreasureMap();
+        // TreasureMap.printTreasureMap();
+
+        // 4. Äventyrarens kompass
+        Compass.printDirection();
     }
 }
