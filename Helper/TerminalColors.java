@@ -1,5 +1,6 @@
 package Helper;
 
+// A helper class for terminal colors
 public class TerminalColors {
     public static final String PLAYER = "\u001B[34m"; // blå
     public static final String MONSTER = "\u001B[31m"; // röd
