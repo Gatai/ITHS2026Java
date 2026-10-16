@@ -13,6 +13,9 @@ public class Main {
         // CandyCalculator.calculatePrice(10, 10);
 
         // Övning 3 – Ditt drömlag
-        DreamTeamManager.startDreamTeam();
+        // DreamTeamManager.startDreamTeam();
+
+        // Övning 4 – Hitta den hemliga skatten!
+        TreasureCalculator.startTreasureCalculator();
     }
 }
