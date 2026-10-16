@@ -12,6 +12,9 @@ public class Main {
         // TreasureMap.printTreasureMap();
 
         // 4. Äventyrarens kompass
-        Compass.printDirection();
+        // Compass.printDirection();
+
+        // 5. Tärningsspelet
+        DiceSimulator.playGame();
     }
 }
