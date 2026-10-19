@@ -22,10 +22,26 @@ public class Main {
         // startTrip(car);
         // startTrip(bicycle);
 
+        // Övning 4 – Djurens talangshow
+        Dog dog = new Dog("Dog");
+        Cat cat = new Cat("Cat");
+        Animal dogAsAnimal = dog;
+        Animal catAsAnimal = cat;
+
+        dogAsAnimal.makeSound();
+        catAsAnimal.makeSound();
+
+        showTalent(dog);
+        showTalent(cat);
     }
 
     // Tillhör Övning 3 – Fordon med superkrafter
     public static void startTrip(Drivable vehicle) {
         vehicle.drive();
+    }
+
+    // Tillhör Övning 4 – Djurens talangshow
+    public static void showTalent(Playable participant) {
+        participant.play();
     }
 }
