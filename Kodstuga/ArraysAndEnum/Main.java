@@ -16,6 +16,9 @@ public class Main {
         // DreamTeamManager.startDreamTeam();
 
         // Övning 4 – Hitta den hemliga skatten!
-        TreasureCalculator.startTreasureCalculator();
+        // TreasureCalculator.startTreasureCalculator();
+
+        // Övning 5 – Välj din superkraft!
+        SuperpowerGame.startGame();
     }
 }
