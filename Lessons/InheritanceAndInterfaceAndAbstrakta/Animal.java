@@ -1,7 +1,7 @@
 package Lessons.InheritanceAndInterfaceAndAbstrakta;
 
 public class Animal {
-    private String name;
+    protected String name;
 
     public Animal(String name) {
         this.name = name;

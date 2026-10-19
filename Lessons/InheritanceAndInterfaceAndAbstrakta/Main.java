@@ -9,10 +9,23 @@ public class Main {
         // cat.makeSound();
 
         // Övning 2 – Mystiska trädet
-        Tree oak = new Oak(12);
-        Tree pine = new Pine(20);
+        // Tree oak = new Oak(12);
+        // Tree pine = new Pine(20);
+        // oak.describe();
+        // pine.describe();
 
-        oak.describe();
-        pine.describe();
+        // Övning 3 – Fordon med superkrafter
+        // Drivable car = new Car();
+        // Drivable bicycle = new Bicycle();
+        // car.drive();
+        // bicycle.drive();
+        // startTrip(car);
+        // startTrip(bicycle);
+
+    }
+
+    // Tillhör Övning 3 – Fordon med superkrafter
+    public static void startTrip(Drivable vehicle) {
+        vehicle.drive();
     }
 }
