@@ -1,0 +1,42 @@
+Övning 1 – Djurparken
+
+I djurparken finns flera sorters djur.
+· Skapa en klass Animal med en instansvariabel name och
+ en konstruktor som tar emot ett namn.
+· Skapa klasserna Dog och Cat som ärver från Animal med extends.
+· Ge båda klasserna en konstruktor som använder super(name).
+· Skapa en metod makeSound() i Animal. Låt Dog och Cat skriva över den så att de låter olika.
+· Skapa ett Dog-objekt och ett Cat-objekt i main och anropa makeSound() på båda.
+Extra utmaning: Skapa ytterligare en djurklass som ärver från Animal.
+Tränar: arv, superklass, subklass, super(), overriding
+
+Övning 2 – Mystiska trädet
+
+Alla träd är träd, men olika träd kan beskrivas på olika sätt.
+· Skapa en abstrakt klass Tree med en instansvariabel height.
+· Lägg till en abstrakt metod describe().
+· Skapa klasserna Oak och Pine som ärver från Tree och implementerar describe() på olika sätt.
+· Skapa objekt av Oak och Pine i main och skriv ut deras beskrivningar.
+Extra utmaning: Prova att skriva new Tree() – varför får du ett kompileringsfel?
+Tränar: abstract, abstrakta metoder, extends
+
+Övning 3 – Fordon med superkrafter
+Olika typer av fordon kan ha samma förmåga.
+· Skapa ett interface Drivable med metoden drive().
+· Skapa klasserna Car och Bicycle som implementerar Drivable.
+· Skriv olika utskrifter i respektive drive()-metod.
+· Skapa båda objekten i main och anropa drive().
+· Skapa en metod startTrip(Drivable vehicle) som anropar vehicle.drive(). Testa med både Car och Bicycle.
+Extra utmaning: Skapa ytterligare en klass Scooter som också implementerar Drivable.
+Tränar: interface, implements, polymorfism och parametrar
+
+Övning 4 – Djurens talangshow
+
+Nu kombinerar du arv, interface och polymorfism.
+· Skapa en abstrakt klass Animal med en abstrakt metod makeSound().
+· Skapa interfacet Playable med metoden play().
+· Skapa Dog och Cat som ärver från Animal. Låt minst Dog implementera Playable.
+· Skapa objekten i main och spara dem i variabler av typen Animal. Anropa makeSound() på båda.
+· Skapa en metod showTalent(Playable participant) som anropar play(). Skicka in din Dog till metoden.
+Extra utmaning: Låt även Cat implementera Playable och testa samma metod med båda.
+Tränar: arv, abstract, interface, polymorfism
