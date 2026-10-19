@@ -19,6 +19,10 @@ public class Main {
         // TreasureCalculator.startTreasureCalculator();
 
         // Övning 5 – Välj din superkraft!
-        SuperpowerGame.startGame();
+        // SuperpowerGame.startGame();
+
+        // Övning 6 – Bygg ett litet spel!
+        Hero hero = new Hero();
+        hero.startHero();
     }
 }
