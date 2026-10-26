@@ -1,11 +1,15 @@
 package Kodstuga.InheritanceAndInterfaceAndAbstraktaAndCollection;
 
 public class Slime extends Monster {
+    private int damage = 15;
+
+    public Slime(String name) {
+        super(name);
+    }
 
     @Override
-    public void attack() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'attack'");
+    public int attack() {
+        return damage;
     }
 
 }

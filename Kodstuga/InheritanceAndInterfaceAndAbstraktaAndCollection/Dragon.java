@@ -1,11 +1,20 @@
 package Kodstuga.InheritanceAndInterfaceAndAbstraktaAndCollection;
 
-public class Dragon extends Monster {
+public class Dragon extends Monster implements SpecialAttack {
+    private int damage = 10;
+    private int specialDamage = 30;
 
-    @Override
-    public void attack() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'attack'");
+    public Dragon(String name) {
+        super(name);
     }
 
+    @Override
+    public int attack() {
+        return damage;
+    }
+
+    @Override
+    public int useSpecialAttack() {
+        return specialDamage;
+    }
 }
