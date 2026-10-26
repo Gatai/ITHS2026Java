@@ -16,13 +16,12 @@ public class Game {
 
             int damage = attacker.attack();
             int remainingHealthPoint = target.takeDamage(damage);
+
             System.out.println(attacker.getName() + " attackerar "
                     + target.getName() + " och gör " + damage + " skada. "
                     + target.getName() + " har " + remainingHealthPoint + " HP kvar.");
 
-            System.out.println("Skada: " + damage + ", målets HP: " + remainingHealthPoint);
-
-            if (target.isAlive()) { // om målet lever lägg till sist i kön;
+            if (target.isAlive()) { // om target lever lägg till sist i kön;
                 turnOrder.add(attacker);
             }
         }
@@ -30,6 +29,7 @@ public class Game {
         return getTheWinner(firstPlayer, secondPlayer);
     }
 
+    // Get the winner
     public Monster getTheWinner(Monster firstPlay, Monster secondPlayer) {
         if (firstPlay.isAlive()) {
             return firstPlay;
@@ -37,7 +37,7 @@ public class Game {
         return secondPlayer;
     }
 
-    // Returnerar det monster som ska bli målet baserat på vem som attackerar.
+    // Get the target
     public Monster getTarget(Monster attacker, Monster firstPlay, Monster secondPlayer) {
         Monster target;
 
