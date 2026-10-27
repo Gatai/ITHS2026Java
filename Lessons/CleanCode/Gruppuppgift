@@ -1,0 +1,66 @@
+FL9 - Clean Code: gruppövning
+
+Scenario
+
+Ni är utvecklingsteamet bakom Haunted Arcade. Spelet fungerar, men koden har
+blivit svår att läsa. Refaktorera den så att den blir tydligare utan att ändra
+vad programmet gör.
+
+Arbeta i grupper om 3-4 personer. Arbeta tillsammans i samma kodfil under
+övningen. Det finns flera bra lösningar: motivera era val i stället för att
+försöka hitta en enda "rätt" version.
+
+Startkod
+
+public class HauntedArcade {
+    static String a = "Nova";
+    static int b = 70;
+    static int c = 40;
+
+    static void q(int x, boolean y) {
+        // remove energy
+        b = b - x;
+        if (b < 0) b = 0;
+
+        // add score
+        if (y) {
+            c = c + 50;
+        } else {
+            c = c + 10;
+        }
+
+        if (c >= 100) {
+            System.out.println("BONUS ROOM UNLOCKED!");
+        }
+
+        System.out.println(a + " | energy=" + b + " | score=" + c);
+    }
+
+    public static void main(String[] args) {
+        q(15, true);
+        q(20, false);
+    }
+}
+
+Runda 1 - Kodbrottsplatsen
+
+Läs koden utan att ändra något. Skriv ner minst fem saker som gör den svårare
+att förstå. Fundera på namngivning, magic numbers, metodansvar, kommentarer,
+struktur, objekt och statiskt eller instansbundet beteende.
+
+Runda 2 - Refactor Relay
+
+Refaktorera koden tillsammans:
+
+· Programmet ska fortfarande ge samma spelresultat.
+· Gör huvudflödet lätt att hitta.
+· Använd tydliga namn på klasser, metoder, variabler och parametrar.
+· Ge betydelsefulla tal namn när det gör koden tydligare.
+· Dela upp metoder om de gör flera tydligt olika saker.
+· Skapa en spelarklass om ni tycker att den ger tydligare ansvar.
+
+Kontrollera resultatet
+
+Kör programmet och kontrollera att Nova först får energy 55 och score 90.
+Efter den andra rundan ska bonusrummet låsas upp och Nova ska ha energy 35
+och score 100.

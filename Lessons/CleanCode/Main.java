@@ -15,5 +15,8 @@ public class Main {
 
         // Spicy uppgift
         DungeonDelivery.run();
+
+        // GRuppuppgift
+        HauntedArcade.run();
     }
 }
