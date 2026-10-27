@@ -1,7 +1,8 @@
 package Lessons.CleanCode;
 
 /**
- * Visar grundläggande Clean Code-principer med namn, konstanter och små metoder.
+ * Visar grundläggande Clean Code-principer med namn, konstanter och små
+ * metoder.
  */
 public class CleanCodeExamples {
     /** Poängen som krävs för att gå upp en nivå. */
@@ -10,7 +11,10 @@ public class CleanCodeExamples {
     /** Kostnaden för en potion i köpberäkningsexemplet. */
     private static final int POTION_PRICE = 30;
 
-    /** Hindrar att den här klassen skapas eftersom den bara innehåller statiska exempel. */
+    /**
+     * Hindrar att den här klassen skapas eftersom den bara innehåller statiska
+     * exempel.
+     */
     private CleanCodeExamples() {
     }
 
@@ -63,7 +67,7 @@ public class CleanCodeExamples {
      * Skriver ut om ett köp lyckas utifrån spelarens coins och kostnaden.
      *
      * @param availableCoins spelarens tillgängliga coins
-     * @param totalCost köpets totala kostnad
+     * @param totalCost      köpets totala kostnad
      */
     private static void printPurchaseResult(int availableCoins, int totalCost) {
         if (availableCoins >= totalCost) {
