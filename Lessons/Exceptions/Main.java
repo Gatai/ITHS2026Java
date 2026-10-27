@@ -1,6 +1,8 @@
 package Lessons.Exceptions;
 
 import Helper.TerminalColors;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -23,7 +25,13 @@ public class Main {
         // }
 
         // Bonus - Exceptiondetektiven
-        theExceptionDetective();
+        // theExceptionDetective();
+
+        // Gruppövning: undersök incidenterna och spela en runda.
+        investigateIncidents();
+        try (Scanner scanner = new Scanner(System.in)) {
+            startGame(scanner);
+        }
     }
 
     private static void thePointGuard(int score) {
@@ -51,6 +59,79 @@ public class Main {
         }
 
         double price = 19.95; // Korrekt kod.
+    }
+
+    private static void investigateIncidents() {
+        System.out.println("\n--- Exception Escape Room: incidenter ---");
+
+        // Incident A: int energy = 7.5; ger kompileringsfel eftersom ett decimaltal
+        // inte kan tilldelas direkt till en int.
+        System.out.println("Incident A: int energy = 7.5; ger kompileringsfel.");
+
+        // Incident B: index 5 finns inte i en array med tre element.
+        int[] doors = { 1, 2, 3 };
+        try {
+            System.out.println("Dörr: " + doors[5]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Incident B: Ogiltigt arrayindex: " + e.getMessage());
+        }
+
+        // Incident C: kontrollera null innan värdet används.
+        String playerName = null;
+        if (playerName == null) {
+            System.out.println("Incident C: Spelarnamnet saknas.");
+        } else {
+            System.out.println("Spelarens namn har " + playerName.length() + " tecken.");
+        }
+
+        investigateSaveFile();
+    }
+
+    private static void investigateSaveFile() {
+        // try-with-resources stänger filen automatiskt, även om något går fel.
+        try (Scanner saveFile = new Scanner(new File("savegame.txt"))) {
+            if (saveFile.hasNextLine()) {
+                System.out.println("Incident D: " + saveFile.nextLine());
+            } else {
+                System.out.println("Incident D: Save-filen är tom.");
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("Incident D: Save-filen kunde inte hittas.");
+        }
+    }
+
+    private static void startGame(Scanner scanner) {
+        System.out.println("\n--- Minispel: välj en dörr ---");
+        // Anropskedjan vidare är startGame -> playRound -> validateChoice.
+        playRound(scanner);
+    }
+
+    private static void playRound(Scanner scanner) {
+        try {
+            System.out.println("Välj dörr 1 (skatt) eller 2 (utgång):");
+            int choice = scanner.nextInt();
+            validateChoice(choice);
+
+            if (choice == 1) {
+                System.out.println("Du hittade skatten!");
+            } else {
+                System.out.println("Du hittade utgången. Spelet är räddat!");
+            }
+        } catch (InputMismatchException e) {
+            // nextInt kräver ett heltal. Ta bort den felaktiga inmatningen.
+            scanner.nextLine();
+            System.out.println("Skriv ett heltal: 1 eller 2.");
+        } catch (IllegalArgumentException e) {
+            System.out.println("Ogiltigt val: " + e.getMessage());
+        } finally {
+            System.out.println("Spelrundan är avslutad.");
+        }
+    }
+
+    private static void validateChoice(int choice) {
+        if (choice < 1 || choice > 2) {
+            throw new IllegalArgumentException("Välj dörr 1 eller 2.");
+        }
     }
 
     private static void theCalculator() {

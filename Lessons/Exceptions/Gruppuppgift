@@ -1,0 +1,89 @@
+FL8 - Gruppövning: Exception Escape Room
+
+Scenario
+
+Ett litet spel har kraschat precis före release. Er grupp är "Crash Response Team".
+Ni ska undersöka vad som går fel, avgöra hur felen bör hanteras och sedan bygga ett
+litet krasch-säkrare spel. Målet är inte att fånga alla fel, utan att välja en
+rimlig lösning för varje situation.
+
+Uppdrag 1 - Undersök fyra incidenter
+
+Arbeta med en incident i taget:
+1. Läs koden och skriv ner vad ni tror kommer att hända.
+2. Försök köra eller kompilera koden.
+3. Anteckna om felet upptäcks vid kompilering eller under körning, och vilken
+   feltyp eller exception som uppstår.
+4. Diskutera om felet bör rättas, fångas eller hanteras på något annat sätt.
+
+Incident A - Energin
+
+int energy = 7.5;
+
+Incident B - Fel dörr
+
+int[] doors = {1, 2, 3};
+
+System.out.println(doors[5]);
+
+Incident C - Den namnlösa spelaren
+
+String playerName = null;
+
+System.out.println(playerName.length());
+
+Incident D - Försvunnen save-fil
+
+Scanner saveFile = new Scanner(new File("savegame.txt"));
+
+System.out.println(saveFile.nextLine());
+
+saveFile.close();
+
+För incident D behöver ni importera java.io.File, java.io.FileNotFoundException
+och java.util.Scanner. Fundera på vad som händer om filen saknas och hur filen
+kan stängas säkert även om något går fel.
+
+Uppdrag 2 - Planera ert minispel
+
+Välj ett tema, till exempel en dungeon, ett rymdskepp, en zombiebutik eller ett
+kattcafé. Skriv ner spelets enkla flöde innan ni börjar koda. Bestäm också vem
+som börjar med spelets flöde, vem som arbetar med felhanteringen och vem som
+testar. Alla i gruppen ska kunna förklara hela lösningen.
+
+Uppdrag 3 - Bygg spelet stegvis
+
+Börja med ett spel som fungerar och bygg sedan vidare:
+
+1. Skapa ett litet textspel med några val och utskrifter.
+2. Dela upp spelet i minst tre metoder som anropar varandra. Till exempel:
+
+   main -> startGame -> playRound -> validateChoice
+
+3. Lägg till ett ställe där ni hanterar en specifik runtime exception med
+   try/catch. Skriv ett felmeddelande som hjälper spelaren att förstå vad som
+   gick fel.
+4. Skapa en metod som kontrollerar ett värde. Om värdet är orimligt ska metoden
+   själv kasta IllegalArgumentException med throw.
+5. Lägg till ett finally-block som gör något begripligt, till exempel skriver
+   att spelrundan eller försöket är avslutat.
+
+Undvik att fånga Exception generellt eller att fånga fel som ni egentligen
+bör rätta. Välj en specifik exception och hantera den där det är meningsfullt.
+
+Uppdrag 4 - Testa och visa
+
+Testa spelet med normal inmatning och minst ett felaktigt fall. Förbered en kort
+redovisning där ni visar:
+
+· Hur spelet spelas.
+· Vilken runtime exception ni fångar och var den fångas.
+· Var och varför IllegalArgumentException kastas.
+· När finally-blocket körs.
+· Vilka metoder som anropas och hur call stack ser ut när den innersta metoden
+  körs.
+
+Bonus - Egen exception
+
+Om ni blir klara tidigt: skapa en egen exception-klass för ett fel som passar
+ert spel och använd den i en metod.
