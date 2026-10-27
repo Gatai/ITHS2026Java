@@ -1,5 +1,6 @@
 package Kodstuga.InheritanceAndInterfaceAndAbstraktaAndCollection;
 
+/** Ett monster med enbart vanlig attack. */
 public class Slime extends Monster {
     private int damage = 15;
 

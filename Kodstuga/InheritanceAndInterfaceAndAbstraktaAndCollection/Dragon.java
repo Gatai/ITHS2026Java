@@ -2,6 +2,7 @@ package Kodstuga.InheritanceAndInterfaceAndAbstraktaAndCollection;
 
 import Helper.TerminalColors;
 
+/** Ett monster som kan använda både vanlig attack och specialattack. */
 public class Dragon extends Monster implements SpecialAttack {
     private int damage = 10;
     private int specialDamage = 30;

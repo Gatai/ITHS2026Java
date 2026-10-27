@@ -1,5 +1,6 @@
 package Kodstuga.InheritanceAndInterfaceAndAbstraktaAndCollection;
 
+/** Basklass för spelets monster och deras gemensamma namn- och HP-hantering. */
 public abstract class Monster {
     protected String name;
     protected int healthPoint;
@@ -15,6 +16,14 @@ public abstract class Monster {
 
     public String getName() {
         return name;
+    }
+
+    public int getHealthPoint() {
+        return healthPoint;
+    }
+
+    public void resetHealth() {
+        healthPoint = 100;
     }
 
     public int takeDamage(int damage) {

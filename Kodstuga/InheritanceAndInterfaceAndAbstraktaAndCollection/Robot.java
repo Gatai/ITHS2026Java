@@ -2,6 +2,7 @@ package Kodstuga.InheritanceAndInterfaceAndAbstraktaAndCollection;
 
 import Helper.TerminalColors;
 
+/** Ett robotmonster som kan använda både vanlig attack och specialattack. */
 public class Robot extends Monster implements SpecialAttack {
     private int damage = 20;
     private int specialDamage = 30;
