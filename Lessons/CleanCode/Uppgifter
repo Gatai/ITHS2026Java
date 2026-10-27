@@ -1,0 +1,73 @@
+FL9 - Clean Code
+
+Så arbetar du
+
+Målet är inte att göra koden "perfekt". Målet är att göra den lättare för en annan person att läsa och förstå. Testkör efter varje förändring så att beteendet är kvar.
+
+1. Koddetektiven - vad betyder egentligen x?
+
+Koden fungerar, men namnen berättar nästan ingenting. Byt namn på variablerna så att koden blir begriplig utan extra kommentarer.
+
+String x = "Mira"; int y = 3; double z = 30.0; double a = y * z; System.out.println(x + " köper drycker för " + a + " kr.");
+
+· Byt ut x, y, z och a mot tydliga namn.
+
+· Kör programmet före och efter. Utskriften ska fortfarande betyda samma sak.
+
+· Jämför med en klasskamrat: valde ni samma namn? Om inte, vilket namn är tydligast?
+
+2. Magic Number Monster
+
+Talet 100 har en betydelse, men det syns inte i koden. Gör betydelsen tydlig med en namngiven konstant.
+
+int playerScore = 120; if (playerScore >= 100) { System.out.println("Level up!"); }
+
+· Skapa en konstant som beskriver vad 100 betyder.
+
+· Använd konstanten i if-satsen.
+
+· Fundera: blir koden lättare att söka efter och ändra senare?
+
+3. Metodkirurgen
+
+Metoden nedan räknar både ut priset och bestämmer vad som ska skrivas ut. Dela upp den i mindre metoder med tydliga namn.
+
+static void shop() { int coins = 100; int numberOfPotions = 2; int totalCost = numberOfPotions * 30; if (coins >= totalCost) { System.out.println("Köpet lyckades. Kostnad: " + totalCost + " coins."); } else { System.out.println("Du har inte tillräckligt med coins."); } }
+
+· Skapa en metod som räknar ut kostnaden.
+
+· Skapa en metod som skriver ut resultatet av köpet.
+
+· Ge metoderna namn som beskriver vad de gör.
+
+· Bonus: gör även potion-priset till en namngiven konstant.
+
+4. Mini-projekt - Potion Shop
+
+Bygg en liten potion-butik. Här får du kombinera namngivning, små metoder och ett objekt med tydligt ansvar.
+
+· Skapa en klass Player med name, health och coins.
+
+· Skapa en metod canBuyPotion(int price) som svarar på om spelaren har råd.
+
+· Skapa en metod buyPotion(int price) som drar coins.
+
+· Skapa en metod heal(int amount) som höjer health. Health ska inte gå över 100.
+
+· Skapa en metod printStatus() som visar spelarens status.
+
+· I main: skapa en spelare, försök köpa en potion och skriv ut status före och efter.
+
+Clean Code-utmaning: försök skriva koden så att du inte behöver kommentarer som förklarar självklara rader. Låt i stället namn och metodstruktur berätta vad som händer.
+
+När är du klar?
+
+· Programmet fungerar.
+
+· Variabler, metoder och klasser har namn som beskriver sitt syfte.
+
+· Oförklarade tal har fått namn där det hjälper läsbarheten.
+
+· Metoderna är relativt små och gör tydliga saker.
+
+· En klasskamrat kan förstå huvudflödet utan att du behöver förklara varje rad.
