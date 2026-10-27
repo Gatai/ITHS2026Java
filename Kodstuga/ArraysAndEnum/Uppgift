@@ -1,0 +1,60 @@
+Övning 1 – Hälsa på din robot!
+
+Skapa en metod som heter halsa.
+· Metoden ska ta emot ett namn som parameter.
+· Metoden ska skriva ut till exempel: ”Hej Alex! Jag är din robot!”.
+· Anropa metoden flera gånger med olika namn.
+
+Extra utmaning: Skapa ytterligare en metod som returnerar robotens favoritnummer.
+
+Övning 2 – Godisräknaren
+
+Skapa en metod som heter raknaPris.
+· Metoden ska ta emot antal godisbitar och pris per bit som parametrar.
+· Metoden ska returnera det totala priset.
+· Anropa metoden och skriv ut resultatet.
+
+Extra utmaning: Skapa en överlagrad version av metoden som bara tar emot antal godisbitar och använder ett fast pris på 2 kr per bit.
+
+Övning 3 – Ditt drömlag
+
+Skapa en String-array med fem spelarnamn.
+· Skriv ut den första och sista spelaren.
+· Byt ut en av spelarna mot ett annat namn.
+· Skriv ut alla spelare med en vanlig for-loop.
+· Skriv ut hur många spelare laget har med length.
+
+Extra utmaning: Skriv ut alla spelare med en Enhanced For Loop.
+
+Övning 4 – Hitta den hemliga skatten!
+
+Skapa en int-array med fem olika mängder guld.
+· Skapa en metod som heter raknaGuld.
+· Metoden ska ta emot en array som parameter.
+· Använd en loop för att räkna ihop allt guld.
+· Returnera totalsumman och skriv ut resultatet.
+
+Extra utmaning: Skapa en metod som hittar den största guldmängden i en kista.
+
+
+-------Har ej gjort övningar nedan ännu ------------------
+Övning 5 – Välj din superkraft!
+
+Skapa en enum som heter Superkraft.
+· Lägg till ELD, IS, VIND och BLIXT.
+· Skapa en variabel som håller spelarens superkraft.
+· Använd switch för att skriva ut ett meddelande beroende på superkraft.
+
+Extra utmaning: Använd values() och en Enhanced For Loop för att skriva ut alla tillgängliga superkrafter.
+
+Övning 6 – Bygg ett litet spel!
+
+Skapa en klass som heter Hjalte.
+· Ge hjälten en privat instansvariabel poang.
+· Skapa en getter som returnerar poängen.
+· Skapa en setter som kan ändra poängen.
+· Skapa en int-array med fem poängvärden, till exempel {10, 20, 5, 50, 15}.
+· Använd en loop för att räkna ihop poängen och ge dem till hjälten.
+· Skriv ut hjältens totala poäng.
+
+Extra utmaning: Skapa en metod som tar emot en array och returnerar den högsta poängen. 
