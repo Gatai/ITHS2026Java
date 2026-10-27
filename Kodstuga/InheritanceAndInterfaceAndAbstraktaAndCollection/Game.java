@@ -1,6 +1,7 @@
 package Kodstuga.InheritanceAndInterfaceAndAbstraktaAndCollection;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class Game {
@@ -27,6 +28,11 @@ public class Game {
         }
 
         return getTheWinner(firstPlayer, secondPlayer);
+    }
+
+    public List<Monster> tournament(List<Monster> monsters) {
+
+        return monsters;
     }
 
     // Get the winner
