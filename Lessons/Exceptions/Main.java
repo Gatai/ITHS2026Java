@@ -34,6 +34,7 @@ public class Main {
         }
     }
 
+    @SuppressWarnings("unused") // Tystnar komplingensfel
     private static void thePointGuard(int score) {
         // Poängen måste ligga mellan 0 och 100.
         if (score < 0 || score > 100) {
@@ -43,6 +44,7 @@ public class Main {
         System.out.println("Poängen " + score + " godkändes.");
     }
 
+    @SuppressWarnings("unused") // Tystnar komplingensfel
     private static void theExceptionDetective() {
         int age = 20; // Korrekt kod.
 
@@ -134,6 +136,7 @@ public class Main {
         }
     }
 
+    @SuppressWarnings("unused") // Tystnar komplingensfel
     private static void theCalculator() {
         try (Scanner scanner = new Scanner(System.in)) {
             try {
@@ -157,6 +160,7 @@ public class Main {
         }
     }
 
+    @SuppressWarnings("unused") // Tystnar komplingensfel
     private static void theTreasureChest() {
         int[] treasure = { 100, 200, 300 };
         try {

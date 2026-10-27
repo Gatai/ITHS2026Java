@@ -4,6 +4,8 @@ package Lessons.CleanCode;
  * Håller reda på Haunted Arcade-spelarens namn, energi och poäng.
  */
 public class ArcadePlayer {
+
+    @SuppressWarnings("unused") // Tystnar komplingensfel
     private static final int MAX_ENERGY = 100;
     private static final int BONUS_SCORE_REWARD = 50;
     private static final int REGULAR_SCORE_REWARD = 10;
@@ -16,9 +18,9 @@ public class ArcadePlayer {
     /**
      * Skapar en spelare med angivna startvärden.
      *
-     * @param name spelarens namn
+     * @param name   spelarens namn
      * @param energy spelarens startenergi
-     * @param score spelarens startpoäng
+     * @param score  spelarens startpoäng
      */
     public ArcadePlayer(String name, int energy, int score) {
         this.name = name;
@@ -29,7 +31,7 @@ public class ArcadePlayer {
     /**
      * Drar rundans energikostnad och lägger till poängbelöningen.
      *
-     * @param energyCost energin som används under rundan
+     * @param energyCost  energin som används under rundan
      * @param earnedBonus om den större poängbelöningen ska ges
      */
     public void completeRound(int energyCost, boolean earnedBonus) {
