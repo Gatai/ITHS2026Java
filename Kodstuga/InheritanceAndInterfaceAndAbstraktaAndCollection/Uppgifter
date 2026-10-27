@@ -1,0 +1,55 @@
+Kodstuga v.43
+
+Bygg ett enkelt monsterspel i terminalen! Tre monster möts i en arena, turas om att attackera och samlar poäng.
+
+Mål
+
+Öva på arv (extends), abstrakta klasser, interface (implements), @Override, polymorfism samt List, Set, Queue, Map och Collections.shuffle().
+
+Spelets regler
+
+Skapa tre monster: Dragon, Robot och Slime. Alla börjar med 100 HP.
+Två monster möts i en match och attackerar växelvis.
+När ett monsters HP når 0 är matchen slut. Vinnaren får 3 poäng.
+Spelaren ska kunna visa monster, starta match, se topplista och avsluta.
+
+Uppdrag
+
+1. Skapa monster
+
+Skapa en abstrakt klass Monster med namn, HP och en abstrakt metod attack(). 
+Låt Dragon, Robot och Slime ärva Monster och skriva egna attack()-metoder
+med @Override.
+
+2. Lägg till specialattacker
+
+Skapa interfacet SpecialAttack med useSpecialAttack().
+Låt Dragon och Robot implementera det och ha var sin specialattack.
+Slime har bara vanlig attack.
+
+3. Organisera arenan
+
+Lägg monstren i en List<Monster> (ArrayList).
+Blanda startordningen med Collections.shuffle().
+Använd en Queue<Monster> för att turas om att attackera.
+
+4. Räkna poäng
+
+Använd Map<String, Integer> (HashMap) till topplistan.
+Använd Set<String> (HashSet) för att samla unika monstertyper.
+
+Förslag på meny
+
+1. Visa alla monster 
+2. Starta en match
+3. Visa topplistan 
+4. Visa monstertyper 
+5. Avsluta
+
+Spicy – om ni hinner
+
+Låt spelaren välja monster.
+Slumpa skadan med Random.
+Använd Deque för att låta ett monster hoppa före i turordningen.
+Skapa ett fjärde monster och en ny specialattack.
+Skriv tester för poäng och HP. 
