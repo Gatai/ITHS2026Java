@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+// Detta kapitel var svår!!!
 /** Startar spelet, skapar arenan och hanterar spelarens menyval. */
 public class Main {
     public static void main(String[] args) {
