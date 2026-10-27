@@ -1,7 +1,7 @@
 package Lessons.CleanCode;
 
 /**
- * Startar Clean Code-exemplen och demonstrationen av Potion Shop.
+ * Startar Clean Code-exemplen samt Potion Shop-demonstrationen.
  */
 public class Main {
     /**
@@ -12,5 +12,8 @@ public class Main {
     public static void main(String[] args) {
         CleanCodeExamples.run();
         PotionShop.run();
+
+        // Spicy uppgift
+        DungeonDelivery.run();
     }
 }
