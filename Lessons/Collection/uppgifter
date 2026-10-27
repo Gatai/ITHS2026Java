@@ -1,0 +1,84 @@
+Det mystiska kösystemet :)
+
+1. Läs innan du kör
+
+Läs koden nedan. Försök först att förutsäga vad som skrivs ut och hur kön förändras.
+
+import java.util.LinkedList;
+
+import java.util.Queue;
+
+public class Main {
+
+public static void main(String[] args) {
+
+Queue<String> ko = new LinkedList<>();
+
+ko.offer("Kim");
+
+ko.offer("Alex");
+
+ko.offer("Kim");
+
+System.out.println(ko.peek()); // kim, alex, kim
+
+System.out.println(ko.poll()); // result => null, alex, kim
+
+System.out.println(ko.size()); // returnerar antal element i collection: result 2
+
+System.out.println(ko); null? // skriver ut => null, alex, kim
+
+}
+
+}
+
+Skriv ned vad ni tror att de fyra utskrifterna blir. 
+1. System.out.println(ko.peek()); // kim
+2. System.out.println(ko.poll()); // alex, kim
+3. System.out.println(ko.size()); // returnerar antal element i collection: result 2
+4. System.out.println(ko); null? // alex, kim
+
+Vad är skillnaden mellan peek() och poll()? 
+Peek - Peek tittar på första elementet utan att ta bort det.
+Poll - Poll hämtar och tar bort första elementet.
+
+peek()
+Hämtar första elementet
+Tar inte bort det
+Returnerar null om kön är tom
+
+poll()
+Hämtar första elementet
+Tar bort det från kön
+Returnerar null om kön är tom
+
+Får samma namn finnas flera gånger i en Queue?
+Ja, samma namn får finnas flera gånger.
+
+En Queue bryr sig inte om duplicerade värden.
+Den är inte som en Set.
+
+2. Testa er hypotes
+
+Kör programmet. Jämför med era förutsägelser och försök förklara eventuella skillnader. Ändra ordningen på de tre offer()-anropen och testa igen.
+
+3. Gör systemet användbart
+
+Utöka programmet så att en fjärde person kan ställa sig i kön.
+Skriv sedan ut vem som står först, betjäna två personer och skriv ut vilka som är kvar.
+ Kontrollera att rätt person alltid betjänas först.
+Ok
+4. Välj en bättre datastruktur
+
+Caféet vill också ha en lista med unika medlemsnamn. En medlem ska bara registreras en gång även om personalen försöker lägga till namnet flera gånger. Skapa en separat samling som löser detta och demonstrera att den fungerar.
+Hasset? 
+Förklara kort varför ni valde den samlingen i stället för Queue.Fundera också på vad som skiljer den från List.
+För att: HashSet tillåter inte dubbletter
+HashSet är snabbt
+HashSet är perfekt för “unika värden”
+
+på en list så kan man ha dubbletter.
+
+5. Liten förändring, stor skillnad
+
+Skapa en List<Integer> med minst fyra poäng från caféets spel. Skriv ut poängen, sortera dem med Collections.sort() och skriv ut dem igen. Varför används Integer och inte int mellan <>? 
