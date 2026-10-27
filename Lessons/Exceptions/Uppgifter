@@ -1,0 +1,56 @@
+FL8 - Exceptions: enkla övningar
+
+Målet är att träna på att känna igen fel, fånga specifika exceptions och göra program som kan hantera fel utan att avslutas oväntat.
+
+1. Skattkistan som kraschar
+
+Skapa en array med tre skatter: 
+
+int[] treasure = {100, 200, 300};
+
+1. Försök skriva ut elementet på index 5 och kör programmet.
+2. Läs felmeddelandet i terminalen. Vilken exception-typ får du?
+Svar: Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 3
+3. Lägg den riskabla raden i ett try-block.
+4. Fånga felet med catch (ArrayIndexOutOfBoundsException e).
+5. Skriv ut ett eget meddelande och även e.getMessage().
+
+Fundera: Är detta ett kompileringsfel eller ett fel som uppstår under körning?
+Svar: det är ett fel under körningen.
+
+2. Den säkra miniräknaren
+
+Gör ett litet program där användaren skriver in två heltal och programmet dividerar det första med det andra.
+
+· Använd Scanner för inmatningen.
+· Fånga ArithmeticException om användaren försöker dividera med 0.
+· Fånga InputMismatchException om användaren skriver något som inte är ett heltal.
+· Programmet ska skriva ett tydligt meddelande i stället för att krascha.
+
+3. Finally - städpatrullen
+
+Utgå från miniräknaren ovan. Lägg till ett finally-block som alltid skriver:
+System.out.println("Programmet är klart.");
+Testa minst tre gånger: korrekt inmatning, division med 0 och fel typ av inmatning. När körs finally?
+
+4. Poängvakten
+
+Skapa en metod som tar emot en poäng mellan 0 och 100:
+
+static void checkScore(int score)
+
+· Om score är mindre än 0 eller större än 100 ska metoden själv kasta ett IllegalArgumentException.
+· Använd throw new IllegalArgumentException("...").
+· Om poängen är giltig ska metoden skriva att poängen godkändes.
+· Anropa metoden från main med både ett giltigt och ett ogiltigt värde.
+· Fånga det ogiltiga värdet med try/catch i main.
+
+Bonus - Exceptiondetektiven
+
+Bestäm för varje kodrad om problemet upptäcks vid kompilering, under körning eller om raden är korrekt. Testkör efter att du gissat.
+
+int age = 20;
+int number = 10 / 0;
+int[] values = new int[3];
+System.out.println(values[3]);
+double price = 19.95;
