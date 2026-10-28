@@ -19,13 +19,14 @@ public class Main {
         // Inte gjort de nedan
 
         // 4. Poängvakten
-        try {
-            thePointGuard(50); // Giltig poäng
-            thePointGuard(120); // Ogiltig poäng
-        } catch (IllegalArgumentException e) {
-            // Fångar felet som poängvakten kastar.
-            System.out.println("Felaktig poäng: " + e.getMessage());
-        }
+        // try {
+        // checkScore(50); // Giltig
+        // checkScore(120); // Ogiltig
+
+        // } catch (IllegalArgumentException e) {
+        // // Fångar felet som poängvakten kastar.
+        // System.out.println("Felaktig poäng: " + e.getMessage());
+        // }
 
         // Bonus - Exceptiondetektiven
         // theExceptionDetective();
@@ -35,6 +36,14 @@ public class Main {
         // try (Scanner scanner = new Scanner(System.in)) {
         // startGame(scanner);
         // }
+    }
+
+    @SuppressWarnings("unused") // Tystnar komplingensfel
+    private static void checkScore(int score) {
+        if (score < 0 || score > 100) {
+            throw new IllegalArgumentException("Poängen måste vara mellan 0 och 100.");
+        }
+        System.out.println("Poängen godkändes! " + score);
     }
 
     @SuppressWarnings("unused") // Tystnar komplingensfel
@@ -74,16 +83,6 @@ public class Main {
                 System.out.println("Programmet är klart.");
             }
         }
-    }
-
-    @SuppressWarnings("unused") // Tystnar komplingensfel
-    private static void thePointGuard(int score) {
-        // Poängen måste ligga mellan 0 och 100.
-        if (score < 0 || score > 100) {
-            throw new IllegalArgumentException("Poängen måste vara mellan 0 och 100.");
-        }
-
-        System.out.println("Poängen " + score + " godkändes.");
     }
 
     @SuppressWarnings("unused") // Tystnar komplingensfel
