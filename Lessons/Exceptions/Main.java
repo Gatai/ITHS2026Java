@@ -13,24 +13,66 @@ public class Main {
 
         // 2. Den säkra miniräknaren
         // 3. Finally - städpatrullen
+        // theCalculator(); inte gjort övningen
         // theCalculator();
 
+        // Inte gjort de nedan
+
         // 4. Poängvakten
-        // try {
-        // thePointGuard(50); // Giltig poäng
-        // thePointGuard(120); // Ogiltig poäng
-        // } catch (IllegalArgumentException e) {
-        // // Fångar felet som poängvakten kastar.
-        // System.out.println("Felaktig poäng: " + e.getMessage());
-        // }
+        try {
+            thePointGuard(50); // Giltig poäng
+            thePointGuard(120); // Ogiltig poäng
+        } catch (IllegalArgumentException e) {
+            // Fångar felet som poängvakten kastar.
+            System.out.println("Felaktig poäng: " + e.getMessage());
+        }
 
         // Bonus - Exceptiondetektiven
         // theExceptionDetective();
 
         // Gruppövning: undersök incidenterna och spela en runda.
-        investigateIncidents();
+        // investigateIncidents();
+        // try (Scanner scanner = new Scanner(System.in)) {
+        // startGame(scanner);
+        // }
+    }
+
+    @SuppressWarnings("unused") // Tystnar komplingensfel
+    private static void theCalculator() {
+        // create scanner object) - Använda try för att vs code varnar att scanner inte
+        // stängs.
+        // Varningen betyder att Scanner myObject i theCalculatorTwo() (Main.java)
+        // öppnas men aldrig stängs. Scanner är en resurs (implementerar AutoCloseable)
+        // som håller en ström öppen, och IDE:n varnar för att den kan "läcka" om den
+        // inte stängs.
+        // Lösning: använd try-with-resources, som stänger den automatiskt, även om ett
+        // fel uppstår:
         try (Scanner scanner = new Scanner(System.in)) {
-            startGame(scanner);
+            try {
+                System.out.print("Enter first number: ");
+                int first = scanner.nextInt(); // read user input
+
+                System.out.print("Enter second number: ");
+                int second = scanner.nextInt(); // read user input
+
+                var result = first / second;
+
+                System.out.println("Resultat av divisionen: " + result);
+
+            } catch (ArithmeticException e) {
+                // Heltalsdivision med noll orsakar ArithmeticException.
+                System.out.println("Användaren försöker dividera med 0");
+                System.out.println(e.getMessage());
+                e.printStackTrace();
+
+            } catch (InputMismatchException e) {
+                // nextInt kräver ett heltal; text eller decimaltal orsakar detta fel.
+                System.out.println("användaren skriver något som inte är ett heltal");
+                System.out.println(e.getMessage());
+                e.printStackTrace();
+            } finally {
+                System.out.println("Programmet är klart.");
+            }
         }
     }
 
@@ -63,6 +105,7 @@ public class Main {
         double price = 19.95; // Korrekt kod.
     }
 
+    @SuppressWarnings("unused") // Tystnar komplingensfel
     private static void investigateIncidents() {
         System.out.println("\n--- Exception Escape Room: incidenter ---");
 
@@ -102,6 +145,7 @@ public class Main {
         }
     }
 
+    @SuppressWarnings("unused") // Tystnar komplingensfel
     private static void startGame(Scanner scanner) {
         System.out.println("\n--- Minispel: välj en dörr ---");
         // Anropskedjan vidare är startGame -> playRound -> validateChoice.
@@ -133,30 +177,6 @@ public class Main {
     private static void validateChoice(int choice) {
         if (choice < 1 || choice > 2) {
             throw new IllegalArgumentException("Välj dörr 1 eller 2.");
-        }
-    }
-
-    @SuppressWarnings("unused") // Tystnar komplingensfel
-    private static void theCalculator() {
-        try (Scanner scanner = new Scanner(System.in)) {
-            try {
-                System.out.print("Skriv det första heltalet: ");
-                int firstNumber = scanner.nextInt();
-
-                System.out.print("Skriv det andra heltalet: ");
-                int secondNumber = scanner.nextInt();
-
-                int result = firstNumber / secondNumber;
-                System.out.println("Resultat: " + result);
-            } catch (ArithmeticException e) {
-                // Heltalsdivision med noll orsakar ArithmeticException.
-                System.out.println("Det går inte att dividera med noll.");
-            } catch (InputMismatchException e) {
-                // nextInt kräver ett heltal; text eller decimaltal orsakar detta fel.
-                System.out.println("Fel inmatning. Skriv två heltal.");
-            } finally {
-                System.out.println("Programmet är klart.");
-            }
         }
     }
 
