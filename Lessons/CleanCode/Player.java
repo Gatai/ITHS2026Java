@@ -1,7 +1,8 @@
 package Lessons.CleanCode;
 
 /**
- * Representerar en spelare med namn, hälsa och coins samt regler för potionköp och läkning.
+ * Representerar en spelare med namn, hälsa och coins samt regler för potionköp
+ * och läkning.
  */
 public class Player {
     /** Högsta tillåtna hälsovärde för en spelare. */
@@ -14,9 +15,9 @@ public class Player {
     /**
      * Skapar en spelare med startvärden och kontrollerar att de är giltiga.
      *
-     * @param name spelarens namn, får inte vara tomt
+     * @param name   spelarens namn, får inte vara tomt
      * @param health spelarens hälsa, från 0 till 100
-     * @param coins spelarens coins, måste vara 0 eller fler
+     * @param coins  spelarens coins, måste vara 0 eller fler
      * @throws IllegalArgumentException om något startvärde är ogiltigt
      */
     public Player(String name, int health, int coins) {
@@ -39,7 +40,8 @@ public class Player {
      * Kontrollerar om spelaren har råd med en potion till angivet pris.
      *
      * @param price potionens pris; negativa priser räknas inte som köpbara
-     * @return {@code true} om priset är giltigt och spelaren har tillräckligt med coins
+     * @return {@code true} om priset är giltigt och spelaren har tillräckligt med
+     *         coins
      */
     public boolean canBuyPotion(int price) {
         return price >= 0 && coins >= price;

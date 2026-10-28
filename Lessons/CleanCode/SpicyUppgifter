@@ -1,49 +1,109 @@
-FL9 - Clean Code Spicy
+FL9 - Clean Code: Spicy (Har ej gemomför detta, AI har gjort den! Jag förstår koden och tanken med uppbygget)
 
 Uppdrag: Dungeon Delivery har vuxit för snabbt
 
-Ett litet leveransspel började som några få rader kod. Nu fungerar programmet fortfarande, men koden har blivit svår att läsa och ändra. Din uppgift är att refaktorera den. Samma scenario och ungefär samma utskrift ska fortfarande fungera efteråt.
+Ett litet leveransspel började som några få rader kod. Programmet fungerar
+fortfarande, men koden har blivit svår att läsa och ändra.
 
-Det finns flera bra lösningar. Clean Code-råden är riktlinjer - motivera dina val i stället för att jaga en enda "rätt" version.
+Din uppgift är att refaktorera koden så att den blir tydligare. Samma scenario
+och ungefär samma utskrift ska fortfarande fungera efteråt.
+
+Det finns flera bra lösningar. Clean Code-råden är riktlinjer, så motivera era
+val i stället för att jaga en enda "rätt" version.
 
 Startkod
 
-public class DungeonDelivery { static String n = "Mira"; static int hp = 100; static int c = 180; static void x(String i, int d, boolean danger, int tip) { // calculate price int p = d * 8; if (danger) { p = p + 50; } if (tip > 0) { p = p + tip; } // check if player can pay if (c < p) { System.out.println(n + " har inte råd med leveransen."); return; } c = c - p; // dangerous roads hurt the player
+public class DungeonDelivery {
+    static String n = "Mira";
+    static int hp = 100;
+    static int c = 180;
 
-if (danger) { hp = hp - 20; } if (hp < 0) { hp = 0; } System.out.println("=== Leverans klar ==="); System.out.println("Bud: " + n); System.out.println("Paket: " + i); System.out.println("Pris: " + p + " coins"); System.out.println("HP kvar: " + hp); System.out.println("Coins kvar: " + c); } public static void main(String[] args) { x("Mystisk kista", 8, true, 10); } }
+    static void x(String i, int d, boolean danger, int tip) {
+        // Calculate price
+        int p = d * 8;
+        if (danger) {
+            p = p + 50;
+        }
+        if (tip > 0) {
+            p = p + tip;
+        }
+
+        // Check if the player can pay
+        if (c < p) {
+            System.out.println(n + " har inte råd med leveransen.");
+            return;
+        }
+        c = c - p;
+
+        // Dangerous roads hurt the player
+        if (danger) {
+            hp = hp - 20;
+        }
+        if (hp < 0) {
+            hp = 0;
+        }
+
+        System.out.println("=== Leverans klar ===");
+        System.out.println("Bud: " + n);
+        System.out.println("Paket: " + i);
+        System.out.println("Pris: " + p + " coins");
+        System.out.println("HP kvar: " + hp);
+        System.out.println("Coins kvar: " + c);
+    }
+
+    public static void main(String[] args) {
+        x("Mystisk kista", 8, true, 10);
+    }
+}
 
 Din refaktorering
 
-1. Gör namnen begripliga. En läsare ska kunna förstå vad variabler, parametrar, metoder och klasser representerar.
+1. Tydliga namn
 
-2. Ta hand om magic numbers. Ge återkommande eller betydelsefulla tal namn när det gör koden tydligare.
+   Byt ut korta och otydliga namn mot namn som visar vad variabler, parametrar,
+   metoder och klasser representerar.
 
-3. Dela upp den stora metoden. Försök ge varje metod ett tydligt ansvar.
+2. Namngivna tal
 
-4. Titta på parametrarna. Hänger flera värden ihop som ett tydligt begrepp? Överväg i så fall en egen klass, till exempel ett leveransuppdrag.
+   Ge betydelsefulla tal namn när det gör koden lättare att förstå och ändra.
 
-5. Titta på klassens ansvar. Ska samma klass verkligen lagra budets status, räkna pris och skriva ut kvitto? Dela upp ansvaret om det gör lösningen tydligare.
+3. Metoder med tydligt ansvar
 
-6. Ta bort kommentarer som bara upprepar vad en tydligt namngiven rad eller metod redan säger. Behåll bara kommentarer som faktiskt tillför information.
+   Dela upp den stora metoden. Försök ge varje metod ett tydligt ansvar.
 
-7. Ordna koden vertikalt så att huvudflödet går att hitta snabbt och detaljerna kommer längre ned.
+4. Granska parametrarna
+
+   Hänger flera parametrar ihop som ett tydligt begrepp? Överväg i så fall att
+   skapa en egen klass, till exempel `DeliveryOrder`.
+
+5. Granska klassernas ansvar
+
+   Ska samma klass lagra budets status, räkna ut priset och skriva ut kvittot?
+   Dela upp ansvaret om det gör lösningen tydligare.
+
+6. Behåll användbara kommentarer
+
+   Ta bort kommentarer som bara upprepar vad tydligt namngiven kod redan säger.
+   Behåll kommentarer som tillför viktig information.
+
+7. Ordna koden uppifrån och ned
+
+   Gör huvudflödet lätt att hitta. Placera detaljerna längre ned i klassen.
 
 Krav
 
-· Programmet ska fortfarande kunna genomföra leveransen "Mystisk kista", 8 km, farlig väg och 10 coins i dricks.
-
-· Priset ska fortfarande bli 124 coins.
-
+· Programmet ska genomföra leveransen "Mystisk kista": 8 km, farlig väg och
+  10 coins i dricks.
+· Priset ska bli 124 coins.
 · Budet börjar med 100 HP och 180 coins.
-
-· Efter leveransen ska budet ha 80 HP och 56 coins.
-
-· Koden ska gå att förklara uppifrån och ned utan att börja i detaljerna.
+· Efter leveransen ska budet ha 80 HP och 56 coins kvar.
+· Koden ska gå att förklara uppifrån och ned utan att börja med detaljerna.
 
 Extra spicy
 
-· Lägg till en ofarlig leverans och återanvänd samma struktur utan att kopiera logik.
-
-· Försök beskriva varje klass med EN mening utan ordet "och". Om det är svårt: fundera på om klassen har för många ansvar.
-
-· Be en klasskamrat läsa din main-metod i 30 sekunder och beskriva programflödet. Refaktorera en gång till utifrån deras feedback.
+· Lägg till en ofarlig leverans. Återanvänd samma struktur i stället för att
+  kopiera logik.
+· Försök beskriva varje klass med en mening utan ordet "och". Om det är svårt,
+  fundera på om klassen har för många ansvarsområden.
+· Be en klasskamrat läsa din `main`-metod i 30 sekunder och beskriva
+  programflödet. Refaktorera sedan en gång till utifrån klasskamratens feedback.

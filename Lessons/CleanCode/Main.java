@@ -10,7 +10,10 @@ public class Main {
      * @param args kommandoradsargument som inte används
      */
     public static void main(String[] args) {
+        // Clean Code
         CleanCodeExamples.run();
+
+        // 4. Mini-projekt - Potion Shop
         PotionShop.run();
 
         // Spicy uppgift
